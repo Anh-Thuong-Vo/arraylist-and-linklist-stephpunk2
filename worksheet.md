@@ -8,9 +8,12 @@ When done, make a pull request and tag @AnhThuongVo.
 Respond to my comments by making new commits to the same branch.
 
 ## Review
-1. In your own words, explain what an ArrayList is. 
+1. In your own words, explain what an ArrayList is.
+An ArrayList is similar to the primitive data type, array, where you have a list that contains elements inside it. Though ArrayList is a bit more flexible than array in terms of its size. 
 
-2. In your own words, explain what a LinkedList is. How is it different from an ArrayList?
+3. In your own words, explain what a LinkedList is. How is it different from an ArrayList?
+
+A LinkedList is a an array of nodes that have data inside and are connected to the next node in the list. The first node is referred as the head and the last node is called the tail. LinkedList is different from an ArrayList as its process of removing, adding, prepending a node is easier than doing for an ArrayList. ArrayList you have to deal with the size and the length of the array and have to shift the elements inside the array. While LinkedList deals with the changes by redirecting the pointers of each node. Also, LinkList tail's pointer continues outside the elements in the list, it points to null. 
 
 ## Exploration
 
@@ -53,7 +56,10 @@ a. Why do we _not_ need a `resize()` method for MyLinkedList?
 b. The code for the `remove()` method can be broken down into four cases. What are they? What should the code do in each case?  
 c. Write the code for `remove()`.  Your implementation of MyLinkedList is now complete.
 
-4. Sections 4.6-4.8 of Zybooks describe a data structure called the doubly-linked list. in short, the main distinguishing feature of a doubly-linked list is that nodes have both `next` and `prev` pointers, that point to the next node and the previous node respectively. This means that the code for a doubly-linked list is almost exactly the same as that for a singly-linked lists, except for the node pointers that you have to change when adding and removing elements.    
-a. Without writing any code, explain how you would need to modify your MyLinkedList `add()` method to turn your implementation into a doubly-linked list.  
+4. Sections 4.6-4.8 of Zybooks describe a data structure called the doubly-linked list. in short, the main distinguishing feature of a doubly-linked list is that nodes have both `next` and `prev` pointers, that point to the next node and the previous node respectively. This means that the code for a doubly-linked list is almost exactly the same as that for a singly-linked lists, except for the node pointers that you have to change when adding and removing elements.
+
+a. Without writing any code, explain how you would need to modify your MyLinkedList `add()` method to turn your implementation into a doubly-linked list.
+
 b. Without writing any code, explain how you would need to modify your MyLinkedList `remove()` method to turn your implementation into a doubly-linked list. How would each of the four cases change?
 
+I would modify the code by using a if statement to go through four different scenerios that will run depending on which node is being removed. For instance, if the node being removed is the head, I would have a variable curNode that would make the next node become the head. Similarly, if the node being removed was the tail, I would have curNode make the previous node become the tail, making the removed node equal to null. curNode would be have the value of the node being removed. Also if the node being removed has a node after it, it would move up in the list to be pointing at the previous node. Similarly, if the node being removed is 
